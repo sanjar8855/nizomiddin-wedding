@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Nikoh to‘yi taklifnomasi: 26-oktyabr 2026, dushanba. Nahorgi nonushta va soat 17:00 da bazm, “Visol” to‘yxonasi, Farg‘ona.">
+<meta name="description" content="Nizomiddin va Nozilaxonning nikoh to‘yi taklifnomasi: 26-oktyabr 2026, dushanba. Nahorgi nonushta va soat 17:00 da bazm, “Visol” to‘yxonasi, Farg‘ona.">
 <meta name="theme-color" content="#FBFAF7">
-<title>Taklifnoma — Nikoh to‘yi, 26-oktyabr 2026</title>
+<title>Nizomiddin & Nozilaxon — Nikoh to‘yi, 26-oktyabr 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
@@ -95,6 +95,11 @@
   .cover-kicker{font-size:.95rem; letter-spacing:.08em; color:var(--muted); margin:0}
   .cover-title{font-family:var(--script); font-weight:400; font-size:clamp(3rem,13vw,4.2rem); line-height:1.1; color:var(--gold); margin:.2em 0 .1em}
   .cover-sub{font-style:italic; margin:0 0 30px; color:var(--ink)}
+  .mono{display:block; width:150px; height:90px; margin:0 auto 18px; color:var(--gold)}
+  .mono.sm{width:130px; height:78px; margin:26px auto 4px}
+  .names{margin:0; font-family:var(--serif); font-style:italic; font-weight:600; line-height:1.15; color:var(--ink); font-size:clamp(2rem,8.5vw,2.7rem)}
+  .names .amp{display:block; font-family:var(--script); font-style:normal; font-weight:400; color:var(--gold); font-size:.8em; line-height:1}
+  .cover .names{margin:.1em 0 22px}
   .seal{
     width:84px; height:84px; margin:0 auto 22px; border-radius:50%;
     display:grid; place-items:center;
@@ -160,7 +165,8 @@
 
   .closing{margin-top:4px}
   .closing p{margin:0; font-style:italic; color:var(--muted)}
-  .host{font-family:var(--serif); font-weight:600; font-size:clamp(2.2rem,8vw,3rem); letter-spacing:.02em; margin:6px 0 0; color:var(--ink); line-height:1.1}
+  .host{font-family:var(--serif); font-weight:600; font-size:clamp(1.9rem,7.5vw,2.6rem); letter-spacing:.02em; margin:6px 0 0; color:var(--ink); line-height:1.1}
+  .host .amp{font-family:var(--script); font-weight:400; color:var(--gold); padding:0 .1em}
 
   footer{text-align:center; padding:0 16px 34px; font-size:.95rem; color:var(--muted)}
   footer a{color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-soft)}
@@ -207,6 +213,16 @@
       <path d="M14 14c4-1 7 1 7 4s-3 4-5 2 0-5 3-4" fill="none" stroke="currentColor" stroke-width="1"/>
       <circle cx="14" cy="14" r="1.6" fill="currentColor"/>
     </symbol>
+    <!-- NN monogram: ikki uzuk bir-biriga ulangan -->
+    <symbol id="monogram" viewBox="0 0 120 72">
+      <circle cx="44" cy="36" r="28" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="76" cy="36" r="28" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M51.25 8.95A28 28 0 0 1 66.94 19.94" fill="none" stroke="#FDFCF9" stroke-width="5"/>
+      <path d="M51.25 8.95A28 28 0 0 1 66.94 19.94" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M60 2l3.2 4.6L60 11l-3.2-4.4z" fill="currentColor"/>
+      <text x="31" y="45" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-weight="600" font-size="28" fill="currentColor">N</text>
+      <text x="89" y="45" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-weight="600" font-size="28" fill="currentColor">N</text>
+    </symbol>
     <symbol id="ornament" viewBox="0 0 180 22">
       <path d="M0 11h66M114 11h66" stroke="currentColor" stroke-width="1"/>
       <path d="M90 2c4 4 4 14 0 18-4-4-4-14 0-18z" fill="none" stroke="currentColor" stroke-width="1.1"/>
@@ -225,14 +241,10 @@
       <svg class="corner bl"><use href="#flourish"/></svg>
       <svg class="corner br"><use href="#flourish"/></svg>
 
-      <div class="seal" aria-hidden="true">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="18" cy="28" r="10"/><circle cx="30" cy="28" r="10"/>
-          <path d="M21 13l3-5 3 5-3 3z" fill="currentColor" stroke-width="1"/>
-        </svg>
-      </div>
+      <svg class="mono" viewBox="0 0 120 72" role="img" aria-label="N va N"><use href="#monogram"/></svg>
       <p class="cover-kicker">Sizga taklifnoma</p>
       <p class="cover-title">Nikoh to‘yi</p>
+      <p class="names">Nizomiddin <span class="amp">&amp;</span> Nozilaxon</p>
       <p class="cover-sub">Hurmatli aziz mehmonimiz!</p>
       <button class="btn" id="openBtn" type="button">Taklifnomani ochish</button>
     </div>
@@ -252,6 +264,8 @@
         <p class="bismillah" lang="ar" dir="rtl">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
         <h1>Taklifnoma</h1>
         <p class="script">Nikoh to‘yi</p>
+        <svg class="mono sm" viewBox="0 0 120 72" role="img" aria-label="N va N"><use href="#monogram"/></svg>
+        <p class="names">Nizomiddin <span class="amp">&amp;</span> Nozilaxon</p>
         <div class="date" aria-label="2026-yil 26-oktyabr, dushanba">
           <span class="side">oktyabr</span>
           <span class="day">26</span>
@@ -310,7 +324,7 @@
       <section class="closing reveal d3">
         <p>Tashrifingizni intiqlik bilan kutamiz.</p>
         <p>Hurmat va ehtirom ila:</p>
-        <p class="host">Nizomiddin</p>
+        <p class="host">Nizomiddin <span class="amp">&amp;</span> Nozilaxon</p>
       </section>
     </div>
   </div>
