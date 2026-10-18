@@ -336,10 +336,18 @@
   audio.addEventListener('error', function(){ audioOk = false; musicBtn.classList.remove('ready'); });
 
   function play(){
-    if(!audioOk) return;
     var p = audio.play();
-    if(p && p.then){ p.then(function(){ musicBtn.classList.add('playing'); }).catch(function(){}); }
+    if(p && p.then){ p.then(function(){ musicBtn.classList.add('playing'); removeUnlock(); }).catch(function(){}); }
   }
+
+  // Avto ijro: avval darrov urinadi, brauzer bloklasa birinchi harakatda boshlaydi
+  var unlockEvents = ['click', 'touchstart', 'keydown', 'scroll', 'wheel'];
+  function unlock(){ if(audio.paused) play(); else removeUnlock(); }
+  function removeUnlock(){
+    unlockEvents.forEach(function(e){ window.removeEventListener(e, unlock); });
+  }
+  unlockEvents.forEach(function(e){ window.addEventListener(e, unlock, {passive:true}); });
+  play();
 
   document.getElementById('openBtn').addEventListener('click', function(){
     cover.classList.add('opened');
